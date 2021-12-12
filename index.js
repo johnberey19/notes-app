@@ -1,4 +1,6 @@
 require('ejs')
+const {Datastore} = require('@google-cloud/datastore')
+const { notStrictEqual } = require('assert')
 const express = require('express')
 const path = require('path')
 const notes = require('./public/js/notes.js')
@@ -12,6 +14,8 @@ app.set('view engine','ejs')
 
 const home = () => {
     app.get('/',(req, res) => {
+        notes.note.title = 'pamagat'
+        notes.note.retrieveNote()
         res.render('index')
     })
 }
@@ -21,5 +25,4 @@ app.listen(3000,() => {
 })
 
 home()
-
 
