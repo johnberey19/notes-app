@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="leftDiv">
+            <h3 id="title1">Notes List</h3>
+            <div id="listDiv" class="btn-group">
+                <button>Note 1</button>
+                <button>Note 2</button>
+                <button>Note 3</button>
+            </div>
+            <button id="btnDelete"> Delete </button>
+        </div>
+        <div id="rightDiv">
+            <div id="uploadDiv">
+                <form id="uploadFile" method="post">
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+            <div id="contentDiv">
+                <form id="saveContent" method="post">
+                    <input type="text" id="noteTitle" name="noteTitle" placeholder="Title">
+                    <br>
+                    <br>
+                    <textarea id="noteContent" placeholder="Content" name="noteContent" rows="10" cols="30"></textarea>
+                    <div id="actionDiv">
+                        <input id="btnUpdate" type="submit" value="Update">
+                        <input id="btnSaveNew" type="submit" value="Save New">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
